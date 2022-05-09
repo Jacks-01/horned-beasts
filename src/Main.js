@@ -1,15 +1,50 @@
 import React from "react";
 import { Component } from "react";
 import HornedBeasts from "./Horned-Beasts";
-import beastList from "./StretchGoals";
-
 
 class Main extends Component {
-    render() { 
+    render() {
+        const hornedBeastArray =
+    [{
+    "_id": 1,
+    "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
+    "title": "UniWhal",
+    "description": "A unicorn and a narwhal nuzzling their horns",
+    "keyword": "narwhal",
+    "horns": 1
+  },
+
+  {
+    "_id": 2,
+    "image_url": "https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80",
+    "title": "Rhino Family",
+    "description": "Parent rhino with two babies",
+    "keyword": "rhino",
+    "horns": 2
+  },
+
+  {
+    "_id": 3,
+    "image_url": "https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg",
+    "title": "Unicorn Head",
+    "description": "Someone wearing a very silly unicorn head mask",
+    "keyword": "unicorn",
+    "horns": 1
+}] 
         return (
             <main>
-                <HornedBeasts title="Title1" src="https://target.scene7.com/is/image/Target/GUEST_237ef223-59c8-4d67-ae87-f587d7ed292f" alt="Horned Beast 1" desc="This is the infamous Horned Beasts. This is its description."/>
-                <HornedBeasts title="Title2" src="https://i.ytimg.com/vi/uqYfyza4e-c/maxresdefault.jpg" alt="Horned Beast 2" desc="This is the other infamous (but much more mischevious) Horned Beast. This is its description."/>
+                <ul>
+                {hornedBeastArray.map((value, index) => {
+                    return <li key={index}><HornedBeasts
+                        title={value.title}
+                        src={value.image_url}
+                        alt={value.keyword}
+                        desc={value.description}
+                        />
+                    </li>
+                     })}
+                </ul>
+                
             </main>
         );
     }
