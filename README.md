@@ -2,7 +2,7 @@
 
 ## Feature 1 : Display Images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 45m-1hr
 
 Start time: _____
 
