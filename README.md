@@ -4,7 +4,7 @@
 
 Estimate of time needed to complete: 45m-1hr
 
-Start time: _____
+Start time: 3:12
 
 Finish time: _____
 
