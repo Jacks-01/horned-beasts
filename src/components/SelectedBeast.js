@@ -6,19 +6,26 @@
 
 import { Modal } from 'bootstrap';
 import React, { Component } from 'react';
-import HornedBeasts from './HornedBeasts';
 
-
+/**
+ * creates and renders a modal when an image is clicked on.
+ */
 class SelectedBeast extends Component {
-    constructor(props) {
-        super(props);
-    }
-    state = {  }
+
     render() { 
         return ( 
             <>
-                <Modal variant="primary" onClick={handleShow}>
-                    <HornedBeasts/>
+                <Modal show={this.props.show} onHide={this.props.onClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{this.props.title}</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                        <p>{this.props.description}</p>
+                    </Modal.Body>
+
+                    <Modal.Footer></Modal.Footer>
+
                 </Modal>
             
             </>

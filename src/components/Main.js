@@ -5,8 +5,8 @@ import beastData from './data.json';
 import { Container, Row } from 'react-bootstrap';
 
 class Main extends Component {
+    
 	render() {
-		console.log({ beastData });
 		return (
 			<>
 				<Container>
