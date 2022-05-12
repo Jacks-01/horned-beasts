@@ -3,10 +3,31 @@ import { Component } from 'react';
 import HornedBeasts from './HornedBeasts';
 import beastData from './data.json';
 import { Container, Row } from 'react-bootstrap';
+import SelectedBeast from './SelectedBeast';
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: false,
+            selectedbeast: beastData[0]
+        }
+    }
+        selectedBeast = (beast) => {
+            this.setState({
+                show: true,
+                selectedbeast: beast
+            })
+        
+        
+    }
+     onClose = () => {
+         this.setState({
+             show: false,
+         })
+        
+    }
 	render() {
-		console.log({ beastData });
 		return (
 			<>
 				<Container>
@@ -18,11 +39,18 @@ class Main extends Component {
                                 title={beast.title}
                                 description={beast.description}
                                 keyword={beast.keyword}
+                                onClick={this.selectedBeast}
+                                beastRef={beast}
                                 // horns={beast.horns}
                             />
                         ))}
                     </Row>
 				</Container>
+                <SelectedBeast
+                show={this.state.show}
+                beast={this.state.selectedbeast}
+                onClose={this.onClose}
+                />
 			</>
 		);
 	}

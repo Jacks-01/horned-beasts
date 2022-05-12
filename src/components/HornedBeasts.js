@@ -14,6 +14,7 @@ class HornedBeasts extends Component {
 	handleClick = () => {
         console.log('clicking button')
         this.setState({favorite: this.state.favorite + "🦄"});
+        this.props.onClick(this.props.beastRef);
     };
 
 	render() {
