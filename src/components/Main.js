@@ -57,13 +57,3 @@ class Main extends Component {
 }
 
 export default Main;
-
-// {beastData.map((value, index) => {
-//     return <li key={index}><HornedBeasts
-//     title={value.title}
-//     src={value.image_url}
-//     alt={value.keyword}
-//     desc={value.description}
-//     />
-// </li>
-// })}
