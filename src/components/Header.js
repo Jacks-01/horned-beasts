@@ -1,16 +1,18 @@
-import React from "react";
-import { Component } from "react";
-
-
+import React from 'react';
+import { Component } from 'react';
 
 class Header extends Component {
-    render() { 
-        return (
-            <header>
-                <h1>Horned Beasts</h1>
-            </header>
-        );
-    }
+	render() {
+		const headerStyles = {
+			display: 'flex',
+			justifyContent: 'center',
+		};
+		return (
+			<header>
+				<h1 style={headerStyles}>Horned Beasts</h1>
+			</header>
+		);
+	}
 }
- 
+
 export default Header;
