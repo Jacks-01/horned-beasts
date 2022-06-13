@@ -14,8 +14,6 @@ class Header extends Component {
                     <Form.Group>
                         <Form.Label></Form.Label>
                         
-
-
                     </Form.Group>
                 </Form>
             </header>
