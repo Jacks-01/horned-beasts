@@ -6,10 +6,15 @@ import { Form } from "react-bootstrap";
 
 class Header extends Component {
 
-    render() { 
+        
+    render() {
+        const headerStyles = {
+            display: 'flex',
+            justifyContent: 'center'
+        }; 
         return (
             <header>
-                <h1>Horned Beasts</h1>
+                <h1 style={headerStyles}>Horned Beasts</h1>
                 <Form>
                     <Form.Group>
                         <Form.Label></Form.Label>
