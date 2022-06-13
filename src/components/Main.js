@@ -12,7 +12,6 @@ class Main extends Component {
 		this.state = {
 			show: false,
 			selectedbeast: beastData,
-			filteredBeasts: false,
 		};
 	}
 	selectedBeast = (beast) => {
@@ -62,7 +61,7 @@ class Main extends Component {
 				</Container>
 				<SelectedBeast
 					show={this.state.show}
-					beast={this.state.selectedbeast}
+					beast={this.state.selectedbeast[0]}
 					onClose={this.onClose}
 				/>
 			</>
